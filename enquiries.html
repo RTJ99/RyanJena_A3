@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Javascript submit form</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script type="text/javascript" src="js/validate.js" ></script>
+  <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="fa/css/all.css">
+</head>
+
+
+  <body onLoad="document.enquiries.userid.focus();">
+    <div id="main">
+
+      <nav>
+        <label for="toggle">&#9776;</label>
+        <input type="checkbox" id="toggle"/>
+        <a href="index.html"><img src="img/Instrumentalist-logos_white1.png" class="logo" alt=""></a>
+        <ul class="navigation-bar" id="nav">
+            <li><a href="index.html" class="current" >Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="enquiries.html">Enquiries</a></li>
+            
+        </ul>
+    
+    </nav>
+
+    <form class="modal-content" onSubmit="return validateForm()" name="enquiries"   >
+      <div class="container">
+        <h1>Enquiries</h1>
+        <label for="userid"></label>
+        <input type="text" placeholder="Enter  your Name" name="userid">
+        <div class="status" id="status"></div>
+        
+        <label for="email"></label>
+        <input type="text" class="form-control" placeholder="Enter Email" name="email">
+        <div class="help-block with-errors"></div>
+        
+        <label for="phone"></label>
+        <input type="number" placeholder="Enter Phone number" name="phone"  >
+        <label for="enquiries"></label>
+        <textarea name="enquiry" placeholder="Enquiry" class="txt-area" ></textarea>
+        <div class="clearfix">
+          <button type="submit" class="btn2" onSubmit= "return validateForm()" onclick="submitForm()">Submit</button>
+        </div>
+      </div>
+    </form>
+
+</div>
+
+</body>
+</html>
